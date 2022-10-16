@@ -2,12 +2,12 @@ import type { SocialsObject } from "./types";
 
 export const SITE = {
   website: "https://astro-paper.pages.dev/",
-  author: "Sat Naing",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "AstroPaper",
+  author: "Daniel Broughton",
+  desc: "Solution Architect @ Helastel | Former Digital Development Manager @ Morgan Motor Company. Founder @ https://codehubble.com Node, React, Vue, Docker, APIs PC Gamer. Science. Lizards. Axolotls.",
+  title: "DanB",
   ogImage: "default-og.png",
   lightAndDarkMode: true,
-  postPerPage: 3,
+  postPerPage: 10,
 };
 
 export const LOGO_IMAGE = {
