@@ -30,7 +30,7 @@ What I really enjoy doing is investigating digital requirements, problems, and o
 ## Resumé
 ### Helastel
 #### Solutions Architect
-***Jul 2022 - Present**
+**Jul 2022 - Present**
 Bristol, England, United Kingdom
 
 In this role, I’ve delivered multiple systems for start-ups and established companies using various technologies. The software solutions have used a mix of AWS, Azure, open-source software and integrations with low-code platforms. Here I have taken a hands-on technical approach and created proofs-of-concept and prototypes. I consulted on and identified business opportunities for each project and led the way for architecture and roadmaps.
@@ -51,7 +51,7 @@ In this role, I’ve delivered multiple systems for start-ups and established co
 
 ### Morgan Motor Company
 #### Digital Development Manager
-***Jun 2021 - Jul 2022**
+**Jun 2021 - Jul 2022**
 Malvern, England, United Kingdom
 
 - Creating technical and non-technical concepts, documents, architectures and roadmaps for all levels of stakeholders.
@@ -61,7 +61,7 @@ Malvern, England, United Kingdom
 - Excellent communication and integrations with all internal teams from CAD, factory floor, electrical engineers, sales and marketing. This includes external dealerships in multiple countries.
 - Released many APIs, portals, integrations and critical vehicle firmware update projects while maintaining the long-term roadmap timing.
 #### Lead Web Developer
-***Jun 2019 - Jun 2021**
+**Jun 2019 - Jun 2021**
 Malvern, England, United Kingdom
 
 - Led digital solutions for Morgan, launching a new site with dynamic regional pricing and multilingual functionality
