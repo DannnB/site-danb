@@ -1,6 +1,10 @@
 ---
 title: 'PM2: Large log files and how to remove them'
-img: 
+datetime: 2020-04-23
+image:
+  url: 
+  alt:
+
 alt: A quick one on a PM2 logging management issue I fell into with large files
 description: A quick one on a PM2 logging management issue I fell into with large files
 tags: ['pm2', 'nodejs', 'javascript']

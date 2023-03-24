@@ -3,34 +3,28 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+I'm a technical Solutions Architect with 8+ years of experience in digital development practices and leading. I help create effective and engaging products for companies. Growing the experience of their teams and creating proficient working processes. Supporting technical and business teams with the ability to motivate and engage on all levels.
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
+My experience has led me to be exposed to various tech stacks and business processes.
 
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
+With an in-depth understanding, I use my skills to create accurate architecture plans, scopes, and estimates for projects and stakeholders. Leading the digital departments and helping developers improve in all areas.
 
-<div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
-</div>
+What I really enjoy doing is investigating digital requirements, problems, and opportunities across multiple platforms, seeking best-in-class solutions through improvements in functionality and user experience. This has led me to deliver some exciting and effective lead-generating applications.
 
-## Tech Stack
+## ◽◽◽ SKILLS ◽◽◽
 
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
-
-## Features
-
-Here are certain features of this site.
-
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
-
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+- Managing digital project scopes internally and with third-party suppliers
+- Managing a wider scope of departments such as marketing and engineering with their specific digital needs
+- Ability to manage multiple projects/work streams concurrently 
+- Implement processes, principles, and standards, including consistency and quality of delivery.
+- Jira | Confluence
+- Node | Express | MongoDB | GraphQL | Various SQL databases| APIs (Stripe, Twilio, eCommerce systems)
+- JavaScript | ES*+ | TypeScript | Vue | React | Accessibility 
+- PHP | Laravel (Jetstream & Inertia) | WordPress
+- AWS | Digital Ocean | Linux | Command Line
+- Docker | Kubernetes | Pipelines
+- Git 
+- UI/UX Design | User Flow | Prototyping
+- Figma
+- Adobe Photoshop, Adobe Illustrator
+- Google Analytics | Event tracking |Data Studio

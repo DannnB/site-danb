@@ -4,6 +4,7 @@ import Tag from "@components/Tag.astro";
 // import { Image, Picture } from '@astrojs/image/components';
 
 export interface Props {
+  nodate?: boolean;
   href?: string;
   post: Frontmatter;
   secHeading?: boolean;
@@ -30,7 +31,12 @@ export default function Card({ href, post, secHeading = true }: Props) {
           <h3 className={styles.titleHeading}>{post.title}</h3>
         )}
       </a>
-      <Datetime datetime={post.datetime} />
+      {!post.datetime ? (
+        <br/>
+        ) : (
+          <Datetime datetime={post.datetime} />
+      )}
+      
       <p>{post.description}</p>
       {/* 
       <ul className={styles.tagContainer}>

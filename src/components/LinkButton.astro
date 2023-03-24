@@ -1,5 +1,6 @@
 ---
 export interface Props {
+  blank?: boolean;
   href: string;
   className?: string;
   ariaLabel?: string;
@@ -7,10 +8,11 @@ export interface Props {
   tabindex?: string;
 }
 
-const { href, className, ariaLabel, title, tabindex } = Astro.props;
+const { blank, href, className, ariaLabel, title, tabindex } = Astro.props;
 ---
 
 <a
+  target={blank}
   type="button"
   href={href}
   tabindex={tabindex}

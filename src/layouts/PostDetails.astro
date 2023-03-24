@@ -12,8 +12,8 @@ export interface Props {
 }
 
 const { frontmatter, Content } = Astro.props.post;
-
 const { title, author, description, ogImage, datetime, tags } = frontmatter;
+console.log(datetime)
 ---
 
 <Layout
@@ -36,8 +36,13 @@ const { title, author, description, ogImage, datetime, tags } = frontmatter;
     </button>
   </div>
   <main id="main-content">
-    <h1 class="post-title">{title}</h1>
-    <Datetime datetime={datetime} size="lg" className="my-2" />
+    <!-- <h1 class="post-title">{title}</h1> -->
+    {!datetime ? (
+        <br/>
+      ) : (
+          <Datetime datetime={datetime} size="lg" className="my-2" />
+      )}
+    
     <article id="article" role="article" class="mx-auto max-w-3xl mt-8 prose">
       <Content />
     </article>

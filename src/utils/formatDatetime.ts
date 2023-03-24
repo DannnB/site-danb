@@ -4,10 +4,10 @@ const formatDatetime = (datetime: string) => {
     myDatetime.toLocaleDateString([], {
       year: "numeric",
       month: "long",
-      day: "numeric",
-    }) +
-    " | " +
-    myDatetime.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
+      day: "2-digit",
+    }) // +
+    //" | " +
+    //myDatetime.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
   );
 };
 

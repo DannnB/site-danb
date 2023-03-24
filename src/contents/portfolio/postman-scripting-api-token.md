@@ -1,5 +1,6 @@
 ---
 title: 'Postman scripting: API TOKEN'
+datetime: 2020-03-07
 img: 
 alt: As a developer have you ever wanted to quickly manipulate a Axios request?
 description: As a developer have you ever wanted to quickly manipulate a Axios request?
