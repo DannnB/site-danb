@@ -3,11 +3,11 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-I'm a technical Solutions Architect with 8+ years of experience in digital development practices and leading. I help create effective and engaging products for companies. Growing the experience of their teams and creating proficient working processes. Supporting technical and business teams with the ability to motivate and engage on all levels.
+I’m a Solutions and Software Architect with a proven track record of delivering cutting-edge systems for both start-ups and established enterprises. My approach combines hands-on technical expertise with strategic leadership, transforming business needs into tangible, scalable solutions.
 
-With an in-depth understanding, I use my skills to create accurate architecture plans, scopes, and estimates for projects and stakeholders. Leading the digital departments and helping developers improve in all areas.
+Drawing on my experience with AWS, Azure, open-source technologies, and low-code platforms, I specialise in creating robust architectures, from proofs-of-concept to fully realised systems. I thrive on identifying and unlocking business opportunities, charting architectural roadmaps, and guiding teams to success. Whether collaborating on distributed systems with IoT, mobile apps, and web portals, optimising DevOps pipelines, or ensuring seamless cloud migrations, my focus is always on impactful, lasting results.
 
-What I really enjoy doing is investigating digital requirements, problems, and opportunities across multiple platforms, seeking best-in-class solutions through improvements in functionality and user experience. This has led me to deliver some exciting and effective lead-generating applications.
+Beyond technical delivery, I lead code reviews, mentor teams, and contribute to pre-sales engagements, translating complex needs into actionable strategies. My goal is to bridge the gap between technical innovation and business goals with clarity, precision, and vision.
 
 ## SKILLS
 ---
