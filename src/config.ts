@@ -1,10 +1,10 @@
 import type { SocialsObject } from "./types";
 
 export const SITE = {
-  website: "https://astro-paper.pages.dev/",
+  website: "https://danb.pro/",
   author: "Daniel Broughton",
-  desc: "Solution Architect @ Helastel | Former Digital Development Manager @ Morgan Motor Company. Founder @ https://codehubble.com Node, React, Vue, Docker, APIs PC Gamer. Science. Lizards. Axolotls.",
-  title: "DanB",
+  desc: "Solution Architect @ Illumo Digital | Former Digital Development Manager @ Morgan Motor Company. Founder @ https://codehubble.com Node, React, Vue, Docker, APIs PC Gamer. Science. Lizards. Axolotls.",
+  title: "DanB - Solutions & Software Architect",
   ogImage: "default-og.png",
   lightAndDarkMode: true,
   postPerPage: 10,
