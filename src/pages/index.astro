@@ -22,9 +22,13 @@ const sortedPosts = getSortedPosts(posts);
       <h1>Daniel Broughton</h1>
 
       <p>
-        I’m a technical Solutions Architect with 8+ years of experience in digital development practices and leading. I help create effective and engaging products for companies. Growing the experience of their teams and creating proficient working processes. Supporting technical and business teams with the ability to motivate and engage on all levels.
-        Specialising in front-end and back-end development with NodeJS, Vue/React, Express. 
-        Currently working as a Solution Architect at Helastel. 
+        I’m a Solutions and Software Architect with a proven track record of delivering cutting-edge systems for both start-ups and established enterprises. My approach combines hands-on technical expertise with strategic leadership, transforming business needs into tangible, scalable solutions.
+      </p>
+      <p>
+        Drawing on my experience with AWS, Azure, open-source technologies, and low-code platforms, I specialise in creating robust architectures, from proofs-of-concept to fully realised systems. I thrive on identifying and unlocking business opportunities, charting architectural roadmaps, and guiding teams to success. Whether collaborating on distributed systems with IoT, mobile apps, and web portals, optimising DevOps pipelines, or ensuring seamless cloud migrations, my focus is always on impactful, lasting results.
+      </p>
+      <p>
+        Beyond technical delivery, I lead code reviews, mentor teams, and contribute to pre-sales engagements, translating complex needs into actionable strategies. My goal is to bridge the gap between technical innovation and business goals with clarity, precision, and vision.
         <br/><br/>For a career history please visit my 
         <LinkButton
           blank
@@ -67,9 +71,24 @@ const sortedPosts = getSortedPosts(posts);
     <Hr /> -->
 
     <section id="recent-posts">
-      <h2>Recent Posts</h2>
+      <h2>Recent Blog Posts</h2>
       <ul>
         {
+          sortedPosts
+            .filter(({ frontmatter }) => frontmatter.datetime) // Assumes only blog posts have a publishedDate
+            .map(
+              ({ frontmatter }, index) =>
+                index < 4 && (
+                  <Card
+                    href={`/posts/${slugify(frontmatter)}`}
+                    post={frontmatter}
+                    secHeading={false}
+                    label={false} 
+                  />
+                )
+            )
+        }
+        <!-- {
           sortedPosts.map(
             ({ frontmatter }, index) =>
               index < 4 && (
@@ -80,11 +99,11 @@ const sortedPosts = getSortedPosts(posts);
                 />
               )
           )
-        }
+        } -->
       </ul>
       <div class="all-posts-btn-wrapper">
         <LinkButton href="/posts">
-          All Posts
+          All Blog Posts
           <svg xmlns="http://www.w3.org/2000/svg"
             ><path
               d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"

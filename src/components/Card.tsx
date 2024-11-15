@@ -1,6 +1,7 @@
 import Datetime from "./Datetime";
 import type { Frontmatter } from "src/types";
 import Tag from "@components/Tag.astro";
+import { useState } from "react";
 // import { Image, Picture } from '@astrojs/image/components';
 
 export interface Props {
@@ -8,6 +9,7 @@ export interface Props {
   href?: string;
   post: Frontmatter;
   secHeading?: boolean;
+  label?: boolean;
 }
 
 const styles = {
@@ -21,16 +23,42 @@ const styles = {
 
 };
 
-export default function Card({ href, post, secHeading = true }: Props) {
+export default function Card({ href, post, secHeading = true, label = true }: Props) {
+
+  const [showLabels, setShowLabels] = useState(true);
+
+  const handleToggle = () => {
+    setShowLabels((prevState: any) => !prevState);
+  };
+
   return (
     <li className={styles.cardContainer}>
       <a href={href} className={styles.titleLink}>
         {secHeading ? (
-          <h2 className={styles.titleHeading}>{post.title}</h2>
+          <h2 className={styles.titleHeading}>
+            {label && (
+              post.datetime ? (
+                <span className="text-sm text-gray-500">Blog: </span>
+              ) : (
+                <span className="text-sm text-gray-500">Portfolio: </span>
+              )
+            )}
+            {post.title}{" "}
+          </h2>
         ) : (
-          <h3 className={styles.titleHeading}>{post.title}</h3>
+          <h3 className={styles.titleHeading}>
+            {label && (
+              post.datetime ? (
+                <span className="text-sm text-gray-500">Blog: </span>
+              ) : (
+                <span className="text-sm text-gray-500">Portfolio: </span>
+              )
+            )}
+            {post.title}{" "}
+          </h3>
         )}
       </a>
+
       {!post.datetime ? (
         <br/>
         ) : (
