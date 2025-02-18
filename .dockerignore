@@ -1,0 +1,7 @@
+# Exclude node_modules and other directories that aren’t needed during build
+node_modules
+.git
+dist
+coverage
+.vscode
+.DS_Store
