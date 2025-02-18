@@ -18,7 +18,9 @@ const { activeNav } = Astro.props;
   <div class="nav-container">
     <div class="top-nav-wrap">
       <a href="/" class="logo">
-        {
+        <h1 class="text-4xl text-left sm:text-5xl font-bold mb-2">Daniel <br> Broughton</h1>
+        <p class="text-xl sm:text-2xl font-semibold mb-6">Solution Architect</p>
+        <!-- {
           LOGO_IMAGE.enable ? (
             <img
               src={LOGO_IMAGE.svg ? logoSVG : logoPNG}
@@ -27,9 +29,8 @@ const { activeNav } = Astro.props;
               height={LOGO_IMAGE.height}
             />
           ) : (
-            SITE.title
           )
-        }
+        } -->
       </a>
       <button class="hamburger-menu" aria-label="menu">
         <div class="icon-container flex">
@@ -95,18 +96,62 @@ const { activeNav } = Astro.props;
       </div>
     </nav>
   </div>
-  <Hr />
+  {/* <Hr /> */}
+  <div class="header-intro px-4 max-w-3xl">
+    <h2 class="text-2xl sm:text-3xl font-semibold mb-4">
+      Innovative Solutions Architect Transforming Digital Landscapes
+    </h2>
+    <p class="mb-6 leading-relaxed">
+      With a passion for crafting innovative and scalable digital solutions, I specialise in designing robust 
+      architectural strategies that drive business growth. Combining technical expertise with strategic insights, 
+      I work closely with teams to transform requirements into seamless, user-focused experiences. Let's build the 
+      future together.
+    </p>
+
+    <!-- Subscription Form -->
+    <div class="subscribe-box flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-1 max-w-md">
+      <input
+        type="email"
+        placeholder="Your email address"
+        class="w-full px-4 py-2 rounded border-none text-gray-700"
+      />
+      <button
+        type="button"
+        class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded"
+      >
+        Subscribe
+      </button>
+    </div>
+  </div>
 </header>
 
 <style>
+  .header-intro {
+    color: white;
+    text-align: left;
+  }
+  .subscribe-box {
+    position: relative;
+    top: 20px;
+    background: white;
+    padding: 4px;
+  }
+  .subscribe-box input {
+    border: 1px grey;
+    border-style: solid;
+    color: black;
+  }
+  .subscribe-box button {
+    background: #77B732;
+  }
   #skip-to-content {
     @apply bg-skin-accent text-skin-inverted py-2 px-3 absolute -top-full focus:top-4 left-16 z-50 transition-all;
   }
   header hr {
-    @apply border-skin-line mx-4 max-w-3xl sm:mx-auto;
+    @apply border-skin-line mx-4 sm:mx-auto;
   }
   .nav-container {
-    @apply max-w-3xl mx-auto flex flex-col sm:flex-row justify-between items-center;
+    @apply max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center;
     /* border-b-2 border-opacity-40 border-b-skin-line */
   }
   .top-nav-wrap {
@@ -114,15 +159,18 @@ const { activeNav } = Astro.props;
   }
   .logo {
     @apply font-semibold text-xl sm:text-2xl py-1;
+    color: white;
   }
   .hamburger-menu {
     @apply p-2 sm:hidden;
   }
   .hamburger-menu svg {
     @apply fill-skin-base w-6 h-6 scale-125;
+    fill: white;
   }
   nav {
     @apply w-full py-2 sm:py-0 flex flex-col items-center sm:justify-end sm:flex-row sm:space-x-4 bg-skin-fill;
+    background: transparent;
   }
   nav ul {
     @apply flex flex-col sm:flex-row sm:space-x-4;
@@ -132,6 +180,7 @@ const { activeNav } = Astro.props;
   }
   nav a {
     @apply py-2 px-3 font-medium hover:text-skin-accent;
+    color: white;
   }
   nav a.active {
     @apply underline underline-offset-4 decoration-wavy decoration-2;
@@ -141,15 +190,18 @@ const { activeNav } = Astro.props;
   }
   .button-wrapper a.active svg {
     @apply fill-skin-accent;
+    fill: white;
   }
   nav button {
     @apply p-1;
   }
   nav button svg {
     @apply w-6 h-6 fill-skin-base hover:fill-skin-accent;
+    fill: white;
   }
   #theme-btn svg {
     @apply hover:rotate-12;
+    fill: white;
   }
 
   .icon-container {
