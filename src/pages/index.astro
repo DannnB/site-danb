@@ -15,95 +15,83 @@ const sortedPosts = getSortedPosts(posts);
 ---
 
 <Layout>
-  <!-- <Header /> -->
 
-  <header id="hero" class="w-full">
-    <div id="hero-grad" class="text-white text-center w-full">
-      <div class="max-w-6xl mx-auto">
-        <Header />
-      </div>
-    </div>
-  </header>
+  <Header />
   
   <main id="main-content">
-    <!-- ===== Hero Section with Gradient Background ===== -->
-
     <!-- ===== About & Blog Posts Layout ===== -->
     <section
       id="about-blog"
-      class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8"
+      class="max-w-6xl mx-auto px-4 py-8 sm:py-20 gap-8"
     >
-      <!-- About Section (2 columns on medium screens) -->
-      <div class="md:col-span-2">
-        <h2 class="text-2xl font-bold mb-4">About</h2>
-        <p class="mb-4">
-          I’m a Solutions and Software Architect with a proven track record of delivering 
-          cutting-edge systems for both start-ups and established enterprises. My approach combines 
-          hands-on technical expertise with strategic leadership, transforming business needs into 
-          tangible, scalable solutions.
-        </p>
-        <p class="mb-4">
-          Drawing on my experience with AWS, Azure, open-source technologies, and low-code platforms, 
-          I specialise in creating robust architectures, from proofs-of-concept to fully realised 
-          systems. I thrive on identifying and unlocking business opportunities, charting architectural 
-          roadmaps, and guiding teams to success.
-        </p>
-        <p class="mb-4">
-          Beyond technical delivery, I lead code reviews, mentor teams, and contribute to pre-sales 
-          engagements, translating complex needs into actionable strategies. My goal is to bridge 
-          the gap between technical innovation and business goals with clarity, precision, and vision.
-        </p>
-        <p>
-          For a career history, visit my 
-          <LinkButton
-            blank
-            className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
-            href="https://www.linkedin.com/in/daniel-broughton-5797716a/"
-            >LinkedIn</LinkButton
-          > or email me at
-          <LinkButton
-            className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
-            href="mailto:contact@danb.pro"
-            >contact@danb.pro</LinkButton>.
-        </p>
-      </div>
-
-      <!-- Right Column: Image & Recent Blog Posts -->
-      <div class="md:col-span-1">
-        <!-- Optional Profile Image -->
-        <img
-          src="/path/to/danb.jpg"
-          alt="Daniel Broughton"
-          class="mb-6 w-full h-auto object-cover rounded-md shadow-sm"
-        />
-
-        <h2 class="text-2xl font-bold mb-4">Blog Posts</h2>
-        <ul class="space-y-4">
-          {
-            sortedPosts
-              .filter(({ frontmatter }) => frontmatter.datetime)
-              .map(
-                ({ frontmatter }, index) =>
-                  index < 4 && (
-                    <Card
-                      href={`/posts/${slugify(frontmatter)}`}
-                      post={frontmatter}
-                      secHeading={false}
-                      label={false}
-                    />
-                  )
-              )
-          }
-        </ul>
-        <div class="all-posts-btn-wrapper mt-6">
-          <LinkButton href="/posts">
-            All Blog Posts
-            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block ml-2 h-4 w-4">
-              <path
-                d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-              ></path>
-            </svg>
-          </LinkButton>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:col-span-2">
+        <div>
+          <h2 class="text-3xl mb-4 roboto-extralight">About</h2>
+          <p class="mb-4">
+            I’m a Solutions and Software Architect with a proven track record of delivering 
+            cutting-edge systems for both start-ups and established enterprises. My approach combines 
+            hands-on technical expertise with strategic leadership, transforming business needs into 
+            tangible, scalable solutions.
+          </p>
+          <p class="mb-4">
+            Drawing on my experience with AWS, Azure, open-source technologies, and low-code platforms, 
+            I specialise in creating robust architectures, from proofs-of-concept to fully realised 
+            systems. I thrive on identifying and unlocking business opportunities, charting architectural 
+            roadmaps, and guiding teams to success.
+          </p>
+          <p class="mb-4">
+            Beyond technical delivery, I lead code reviews, mentor teams, and contribute to pre-sales 
+            engagements, translating complex needs into actionable strategies. My goal is to bridge 
+            the gap between technical innovation and business goals with clarity, precision, and vision.
+          </p>
+          <p>
+            For a career history, visit my 
+            <LinkButton
+              blank
+              className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
+              href="https://www.linkedin.com/in/daniel-broughton-5797716a/"
+              >LinkedIn</LinkButton
+            > or email me at
+            <LinkButton
+              className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
+              href="mailto:contact@danb.pro"
+              >contact@danb.pro</LinkButton>.
+          </p>
+        </div>
+        <div>
+          <h2 class="text-3xl mb-4 roboto-extralight">Services</h2>
+          <p>Coming soon.</p>
+          <!-- <p>Coming soon. Sign up to my newsletter for the latest insights.</p> -->
+        </div>
+        <div>
+          <h2 class="text-3xl mb-4 roboto-extralight">Blog Posts</h2>
+          <ul class="space-y-4">
+            {
+              sortedPosts
+                .filter(({ frontmatter }) => frontmatter.datetime)
+                .map(
+                  ({ frontmatter }, index) =>
+                    index < 4 && (
+                      <Card
+                        href={`/posts/${slugify(frontmatter)}`}
+                        post={frontmatter}
+                        secHeading={false}
+                        label={false}
+                      />
+                    )
+                )
+            }
+          </ul>
+          <div class="all-posts-btn-wrapper mt-6">
+            <LinkButton href="/posts">
+              All Blog Posts
+              <svg xmlns="http://www.w3.org/2000/svg" class="inline-block ml-2 h-4 w-4">
+                <path
+                  d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+                ></path>
+              </svg>
+            </LinkButton>
+          </div>
         </div>
       </div>
     </section>
@@ -116,16 +104,6 @@ const sortedPosts = getSortedPosts(posts);
 <style>
   /* If you’re using Tailwind, you might not need much here. 
      However, you can add extra custom styling or fallback CSS as needed. */
-
-  /* Example: ensuring the gradient hero’s text remains readable. */
-  #hero {
-    /* The tailwind classes handle the gradient, padding, etc. */
-    background: #1C1233;
-  }
-  #hero-grad {
-    background: rgb(15,1,50);
-    background: linear-gradient(192deg, rgba(15, 1, 50, 0.73) 0%, rgb(10 40 107 / 73%) 50%, rgb(15, 1, 50, 0.73) 100%);
-  }
 
   #hero.h2 {
     color: white;

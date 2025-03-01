@@ -58,9 +58,10 @@ module.exports = {
       transparent: "transparent",
     },
     fontFamily: {
-      mono: ["IBM Plex Mono", "monospace"],
+      // mono: ['"Courier New"', 'monospace'],
+      'sans': ['ui-sans-serif', 'system-ui'],
     },
     // },
   },
-  plugins: [require("@tailwindcss/typography")],
+  //plugins: [require("@tailwindcss/typography")],
 };
