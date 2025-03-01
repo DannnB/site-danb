@@ -11,102 +11,177 @@ export interface Props {
 }
 
 const { activeNav } = Astro.props;
+const isHome = Astro.url.pathname === "/";
 ---
-
-<header>
-  <a id="skip-to-content" href="#main-content">Skip to content</a>
-  <div class="nav-container">
-    <div class="top-nav-wrap">
-      <a href="/" class="logo">
-        {
-          LOGO_IMAGE.enable ? (
-            <img
-              src={LOGO_IMAGE.svg ? logoSVG : logoPNG}
-              alt="AstroPaper Logo"
-              width={LOGO_IMAGE.width}
-              height={LOGO_IMAGE.height}
-            />
-          ) : (
-            SITE.title
-          )
-        }
-      </a>
-      <button class="hamburger-menu" aria-label="menu">
-        <div class="icon-container flex">
-          <div id="first-line"></div>
-          <div id="second-line"></div>
-          <div id="third-line"></div>
-        </div>
-      </button>
-    </div>
-    <nav class="display-none sm:flex">
-      <ul>
-        <li>
-          <a href="/posts" class={activeNav === "posts" ? "active" : ""}
-            >Posts</a
-          >
-        </li>
-        <li>
-          <a href="/portfolio" class={activeNav === "portfolio" ? "active" : ""}
-            >Portfolio</a
-          >
-        </li>
-        <li>
-          <a href="/tags" class={activeNav === "tags" ? "active" : ""}>Tags</a>
-        </li>
-        <li>
-          <a href="/about" class={activeNav === "about" ? "active" : ""}
-            >About</a
-          >
-        </li>
-      </ul>
-      <div class="button-wrapper">
-        <LinkButton
-          href="/search"
-          className={`focus-outline p-1 ${
-            activeNav === "search" ? "active" : ""
-          }`}
-          ariaLabel="search"
-          title="Search"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg"
-            ><path
-              d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"
-            ></path>
-          </svg>
-        </LinkButton>
-
-        {
-          SITE.lightAndDarkMode && (
-            <button
-              id="theme-btn"
-              class="focus-outline"
-              aria-label="switch theme"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" id="moon-svg">
-                <path d="M20.742 13.045a8.088 8.088 0 0 1-2.077.271c-2.135 0-4.14-.83-5.646-2.336a8.025 8.025 0 0 1-2.064-7.723A1 1 0 0 0 9.73 2.034a10.014 10.014 0 0 0-4.489 2.582c-3.898 3.898-3.898 10.243 0 14.143a9.937 9.937 0 0 0 7.072 2.93 9.93 9.93 0 0 0 7.07-2.929 10.007 10.007 0 0 0 2.583-4.491 1.001 1.001 0 0 0-1.224-1.224zm-2.772 4.301a7.947 7.947 0 0 1-5.656 2.343 7.953 7.953 0 0 1-5.658-2.344c-3.118-3.119-3.118-8.195 0-11.314a7.923 7.923 0 0 1 2.06-1.483 10.027 10.027 0 0 0 2.89 7.848 9.972 9.972 0 0 0 7.848 2.891 8.036 8.036 0 0 1-1.484 2.059z" />
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" id="sun-svg">
-                <path d="M6.993 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007S14.761 6.993 12 6.993 6.993 9.239 6.993 12zM12 8.993c1.658 0 3.007 1.349 3.007 3.007S13.658 15.007 12 15.007 8.993 13.658 8.993 12 10.342 8.993 12 8.993zM10.998 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2h-3zm17 0h3v2h-3zM4.219 18.363l2.12-2.122 1.415 1.414-2.12 2.122zM16.24 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.342 7.759 4.22 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z" />
-              </svg>
+<div id="hero">
+  <div id="hero-grad" class="text-white text-center w-full">
+    <div class="max-w-6xl mx-auto">
+      <header>
+        <a id="skip-to-content" href="#main-content">Skip to content</a>
+        <div class="nav-container">
+          <div class="top-nav-wrap">
+            <a href="/" class="logo">
+              <h1 class="text-4xl text-left sm:text-5xl font-bold mb-2">Daniel <br>Broughton</h1>
+              <p class="text-xl sm:text-2xl font-semibold mb-6 text-left roboto-reg">Solution Architect</p>
+              <!-- {
+                LOGO_IMAGE.enable ? (
+                  <img
+                    src={LOGO_IMAGE.svg ? logoSVG : logoPNG}
+                    alt="AstroPaper Logo"
+                    width={LOGO_IMAGE.width}
+                    height={LOGO_IMAGE.height}
+                  />
+                ) : (
+                )
+              } -->
+            </a>
+            <button class="hamburger-menu" aria-label="menu">
+              <div class="icon-container flex">
+                <div id="first-line"></div>
+                <div id="second-line"></div>
+                <div id="third-line"></div>
+              </div>
             </button>
-          )
-        }
-      </div>
-    </nav>
+          </div>
+          <nav class="display-none sm:flex">
+            <ul>
+              <li>
+                <a href="/posts" class={activeNav === "posts" ? "active" : ""}
+                  >Posts</a
+                >
+              </li>
+              <li>
+                <a href="/portfolio" class={activeNav === "portfolio" ? "active" : ""}
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a href="/tags" class={activeNav === "tags" ? "active" : ""}>Tags</a>
+              </li>
+              <li>
+                <a href="/about" class={activeNav === "about" ? "active" : ""}
+                  >About</a
+                >
+              </li>
+            </ul>
+            <div class="button-wrapper">
+              <LinkButton
+                href="/search"
+                className={`focus-outline p-1 ${
+                  activeNav === "search" ? "active" : ""
+                }`}
+                ariaLabel="search"
+                title="Search"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" style="fill:white;"
+                  ><path
+                    d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"
+                  ></path>
+                </svg>
+              </LinkButton>
+
+              {
+                SITE.lightAndDarkMode && (
+                  <button
+                    id="theme-btn"
+                    class="focus-outline"
+                    aria-label="switch theme"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" id="moon-svg">
+                      <path d="M20.742 13.045a8.088 8.088 0 0 1-2.077.271c-2.135 0-4.14-.83-5.646-2.336a8.025 8.025 0 0 1-2.064-7.723A1 1 0 0 0 9.73 2.034a10.014 10.014 0 0 0-4.489 2.582c-3.898 3.898-3.898 10.243 0 14.143a9.937 9.937 0 0 0 7.072 2.93 9.93 9.93 0 0 0 7.07-2.929 10.007 10.007 0 0 0 2.583-4.491 1.001 1.001 0 0 0-1.224-1.224zm-2.772 4.301a7.947 7.947 0 0 1-5.656 2.343 7.953 7.953 0 0 1-5.658-2.344c-3.118-3.119-3.118-8.195 0-11.314a7.923 7.923 0 0 1 2.06-1.483 10.027 10.027 0 0 0 2.89 7.848 9.972 9.972 0 0 0 7.848 2.891 8.036 8.036 0 0 1-1.484 2.059z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" id="sun-svg">
+                      <path d="M6.993 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007S14.761 6.993 12 6.993 6.993 9.239 6.993 12zM12 8.993c1.658 0 3.007 1.349 3.007 3.007S13.658 15.007 12 15.007 8.993 13.658 8.993 12 10.342 8.993 12 8.993zM10.998 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2h-3zm17 0h3v2h-3zM4.219 18.363l2.12-2.122 1.415 1.414-2.12 2.122zM16.24 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.342 7.759 4.22 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z" />
+                    </svg>
+                  </button>
+                )
+              }
+            </div>
+          </nav>
+        </div>
+        {/* <Hr /> */}
+        {isHome && (
+          <div class="header-intro px-4 max-w-3xl">
+            <h2 class="text-3xl mb-4 roboto-bold">
+              Innovative Solutions Architect Transforming Digital Landscapes
+            </h2>
+            <p class="pb-10 leading-relaxed">
+              With a passion for crafting innovative and scalable digital solutions, I specialise in designing robust 
+              architectural strategies that drive business growth. Combining technical expertise with strategic insights, 
+              I work closely with teams to transform requirements into seamless, user-focused experiences. <span class="source-sans-bold">Let's build the 
+              future together.</span>
+            </p>
+
+            <!-- Subscription Form -->
+            {/* <h3 class="newsletter-title text-2xl font-bold mb-4 w-full">
+              Join My Newsletter
+            </h3>
+            <script async data-uid="1bd2f99f3f" src="https://danb-solution-architect.kit.com/1bd2f99f3f/index.js"></script> */}
+            {/* <div class="subscribe-box flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-1 max-w-md">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="w-full px-4 py-2 rounded border-none text-gray-700"
+              />
+              <button
+                type="button"
+                class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded"
+              >
+                Subscribe
+              </button>
+            </div> */}
+          </div>
+        )}
+      </header>
+    </div>
   </div>
-  <Hr />
-</header>
+</div>
 
 <style>
+  .header-intro {
+    color: white;
+    text-align: left;
+  }
+  .header-intro h2 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+  .header-intro p {
+    max-width: 34rem;
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+  #hero {
+    /* The tailwind classes handle the gradient, padding, etc. */
+    background: #1C1233;
+  }
+  #hero-grad {
+    background: rgb(15,1,50);
+    background: linear-gradient(192deg, rgba(15, 1, 50, 0.73) 0%, rgb(10 40 107 / 73%) 50%, rgb(15, 1, 50, 0.73) 100%);
+  }
+
+  .subscribe-box {
+    position: relative;
+    top: 20px;
+    background: white;
+    padding: 4px;
+  }
+  .subscribe-box input {
+    border: 1px grey;
+    border-style: solid;
+    color: black;
+  }
+  .subscribe-box button {
+    background: #77B732;
+  }
   #skip-to-content {
     @apply bg-skin-accent text-skin-inverted py-2 px-3 absolute -top-full focus:top-4 left-16 z-50 transition-all;
   }
   header hr {
-    @apply border-skin-line mx-4 max-w-3xl sm:mx-auto;
+    @apply border-skin-line mx-4 sm:mx-auto;
   }
   .nav-container {
-    @apply max-w-3xl mx-auto flex flex-col sm:flex-row justify-between items-center;
+    @apply max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center;
     /* border-b-2 border-opacity-40 border-b-skin-line */
   }
   .top-nav-wrap {
@@ -114,15 +189,18 @@ const { activeNav } = Astro.props;
   }
   .logo {
     @apply font-semibold text-xl sm:text-2xl py-1;
+    color: white;
   }
   .hamburger-menu {
     @apply p-2 sm:hidden;
   }
   .hamburger-menu svg {
     @apply fill-skin-base w-6 h-6 scale-125;
+    fill: white;
   }
   nav {
     @apply w-full py-2 sm:py-0 flex flex-col items-center sm:justify-end sm:flex-row sm:space-x-4 bg-skin-fill;
+    background: transparent;
   }
   nav ul {
     @apply flex flex-col sm:flex-row sm:space-x-4;
@@ -132,6 +210,7 @@ const { activeNav } = Astro.props;
   }
   nav a {
     @apply py-2 px-3 font-medium hover:text-skin-accent;
+    color: white;
   }
   nav a.active {
     @apply underline underline-offset-4 decoration-wavy decoration-2;
@@ -141,15 +220,18 @@ const { activeNav } = Astro.props;
   }
   .button-wrapper a.active svg {
     @apply fill-skin-accent;
+    fill: white;
   }
   nav button {
     @apply p-1;
   }
   nav button svg {
     @apply w-6 h-6 fill-skin-base hover:fill-skin-accent;
+    fill: white;
   }
   #theme-btn svg {
     @apply hover:rotate-12;
+    fill: white;
   }
 
   .icon-container {
@@ -157,6 +239,7 @@ const { activeNav } = Astro.props;
   }
   .icon-container div {
     @apply bg-skin-inverted h-0.5 transition-all;
+    background-color: white;
   }
   #first-line {
     @apply w-full;

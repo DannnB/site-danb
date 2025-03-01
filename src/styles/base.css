@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --color-fill: 251, 254, 251;
+    --color-fill: 243, 244, 245;
     --color-text-base: 40, 39, 40;
     --color-accent: 0, 108, 172;
     --color-card: 230, 230, 230;
@@ -31,7 +31,48 @@
   body {
     @apply font-mono bg-skin-fill text-skin-base min-h-screen flex flex-col 
     selection:bg-skin-accent selection:text-skin-inverted selection:bg-opacity-70;
+    font-family: "Source Sans 3", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
   }
+  .roboto-reg {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+  }
+  .roboto-bold {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+  }
+  .roboto-extralight {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+  }
+
+  .source-sans-bold {
+    font-family: "Source Sans 3", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  h1 {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+  }
+
   section,
   footer {
     @apply max-w-3xl mx-auto px-4;
