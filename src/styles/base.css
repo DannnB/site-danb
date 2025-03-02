@@ -99,9 +99,19 @@
   pre.astro-code {
     padding: 10px!important;
   }
+  /* inline code */
+  p code {
+    background-color: #282c34;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #abb2bf;
+    padding: 5px 11px;
+  }
 
   article pre {
     padding: 14px;
+    margin-top: 6px;
   }
 
   /* width */

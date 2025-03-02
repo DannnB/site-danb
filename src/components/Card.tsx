@@ -64,13 +64,12 @@ export default function Card({ href, post, secHeading = true, label = true }: Pr
       
       <p>{post.description}</p>
 
-      {label && (
-          post.datetime ? (
-            <button>Read Article</button>
-          ) : (
-            <button>View</button>
-          )
-        )}
+      
+      {post.datetime ? (
+        <button>Read Article</button>
+      ) : (
+        <button>View</button>
+      )}
       
       {/* 
       <ul className={styles.tagContainer}>
