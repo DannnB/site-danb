@@ -9,7 +9,7 @@ Drawing on my experience with AWS, Azure, open-source technologies, and low-code
 
 Beyond technical delivery, I lead code reviews, mentor teams, and contribute to pre-sales engagements, translating complex needs into actionable strategies. My goal is to bridge the gap between technical innovation and business goals with clarity, precision, and vision.
 
-## SKILLS
+## Skills
 ---
 - Managing digital project scopes internally and with third-party suppliers
 - Managing a wider scope of departments such as marketing and engineering with their specific digital needs
@@ -28,7 +28,8 @@ Beyond technical delivery, I lead code reviews, mentor teams, and contribute to 
 - Google Analytics | Event tracking |Data Studio
 
 ## Resumé
-### Helastel
+---
+### illumo digital
 #### Solutions Architect
 **Jul 2022 - Present**
 Bristol, England, United Kingdom

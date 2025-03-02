@@ -38,9 +38,9 @@ export default function Card({ href, post, secHeading = true, label = true }: Pr
           <h2 className={styles.titleHeading}>
             {label && (
               post.datetime ? (
-                <span className="text-sm text-gray-500">Blog: </span>
+                <span className="text-gray-500">Article: </span>
               ) : (
-                <span className="text-sm text-gray-500">Portfolio: </span>
+                <span className="text-gray-500">Portfolio: </span>
               )
             )}
             {post.title}{" "}
@@ -58,14 +58,20 @@ export default function Card({ href, post, secHeading = true, label = true }: Pr
           </h3>
         )}
 
-      {!post.datetime ? (
-        <br/>
-        ) : (
-          <Datetime datetime={post.datetime} />
+      {post.datetime && (
+        <Datetime datetime={post.datetime} />
       )}
       
       <p>{post.description}</p>
-      <button>Read Article</button>
+
+      {label && (
+          post.datetime ? (
+            <button>Read Article</button>
+          ) : (
+            <button>View</button>
+          )
+        )}
+      
       {/* 
       <ul className={styles.tagContainer}>
         {post.tags.map((name) => 

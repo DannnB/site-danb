@@ -12,13 +12,13 @@
     --color-border: 236, 233, 233;
   }
   .theme-dark {
-    --color-fill: 1, 16, 50;
+    /* --color-fill: 1, 16, 50; */
     /* --color-fill: 47, 55, 65; */
-    --color-text-base: 230, 230, 230;
+    /* --color-text-base: 230, 230, 230;
     --color-accent: 26, 217, 217;
     --color-card: 63, 75, 90;
     --color-card-muted: 89, 107, 129;
-    --color-border: 59, 70, 85;
+    --color-border: 59, 70, 85; */
   }
   #sun-svg,
   .theme-dark #moon-svg {
@@ -28,6 +28,7 @@
   .theme-dark #sun-svg {
     display: block;
   }
+  
   body {
     @apply bg-skin-fill text-skin-base min-h-screen flex flex-col 
     selection:bg-skin-accent selection:text-skin-inverted selection:bg-opacity-70;
@@ -35,6 +36,7 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    line-height: 1.3rem;
   }
   .roboto-reg {
     font-family: "Roboto", serif;
@@ -131,10 +133,17 @@
     background: white;
   }
 
+  .card-container h2 {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin: 0;
+  }
   .card-container h3 {
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 1.1rem;
+    margin: 0;
   }
 
   .card-container a {
@@ -155,7 +164,44 @@
     border-radius: 5px;
     margin-top: 10px;
     font-size: 0.9rem;
-    float: right;
+    /* float: right; */
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    margin: 20px 0 10px 0;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin: 20px 0 10px 0;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    margin: 20px 0 10px 0;
+    text-decoration: underline;
+  }
+
+  h4 {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    margin: 20px 0 10px 0;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 10px 0 0 0;
+  }
+  hr {
+    margin: 6px 0 10px 0px;
+  }
+  #about ul {
+    list-style: disc;
+    padding: 0 0 0 30px;
   }
 }
 
