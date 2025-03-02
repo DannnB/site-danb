@@ -10,6 +10,7 @@ function withOpacity(variableName) {
 }
 
 module.exports = {
+  darkMode: 'class',
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     // Remove the following screen breakpoint or add other breakpoints

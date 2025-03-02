@@ -13,7 +13,7 @@ export interface Props {
 }
 
 const styles = {
-  cardContainer: "my-6",
+  cardContainer: "card-container my-6",
   titleLink:
     "text-skin-accent font-medium text-lg underline-offset-4 decoration-dashed focus-visible:no-underline focus-visible:underline-offset-0 inline-block",
   titleHeading: "font-medium text-lg decoration-dashed hover:underline",
@@ -57,7 +57,6 @@ export default function Card({ href, post, secHeading = true, label = true }: Pr
             {post.title}{" "}
           </h3>
         )}
-      </a>
 
       {!post.datetime ? (
         <br/>
@@ -66,6 +65,7 @@ export default function Card({ href, post, secHeading = true, label = true }: Pr
       )}
       
       <p>{post.description}</p>
+      <button>Read Article</button>
       {/* 
       <ul className={styles.tagContainer}>
         {post.tags.map((name) => 
@@ -89,6 +89,7 @@ export default function Card({ href, post, secHeading = true, label = true }: Pr
         )}
       </ul>
       */}
+      </a>
     </li>
   );
 }

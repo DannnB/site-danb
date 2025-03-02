@@ -94,6 +94,14 @@
     overflow-y: scroll;
   }
 
+  pre.astro-code {
+    padding: 10px!important;
+  }
+
+  article pre {
+    padding: 14px;
+  }
+
   /* width */
   ::-webkit-scrollbar {
     @apply w-3;
@@ -112,6 +120,42 @@
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-skin-card-muted;
+  }
+
+  .card-container {
+    padding: 10px;
+    background: #e1e1e1;
+  }
+
+  .card-container:hover {
+    background: white;
+  }
+
+  .card-container h3 {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.1rem;
+  }
+
+  .card-container a {
+    color: black;
+  }
+
+  .card-container p {
+    padding-top: 4px;
+    font-family: 'Source Sans 3';
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.3rem;
+  }
+
+  .card-container button {
+    background: #ffffff;
+    padding: 2px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    float: right;
   }
 }
 
