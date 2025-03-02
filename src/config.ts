@@ -6,7 +6,7 @@ export const SITE = {
   desc: "Solution Architect @ Illumo Digital | Former Digital Development Manager @ Morgan Motor Company. Founder @ https://codehubble.com Node, React, Vue, Docker, APIs PC Gamer. Science. Lizards. Axolotls.",
   title: "DanB - Solutions & Software Architect",
   ogImage: "default-og.png",
-  lightAndDarkMode: false,
+  lightAndDarkMode: true,
   postPerPage: 10,
 };
 
