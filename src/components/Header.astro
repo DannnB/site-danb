@@ -102,34 +102,16 @@ const isHome = Astro.url.pathname === "/";
         {/* <Hr /> */}
         {isHome && (
           <div class="header-intro px-4 max-w-3xl">
-            <h2 class="text-3xl mb-4 roboto-bold">
-              Innovative Solutions Architect Transforming Digital Landscapes
-            </h2>
+            <h2>I CREATE SOLUTIONS,</br>
+            <span>NOT JUST DOCUMENTS.</h2>
+            <h3>Building stuff you actually need.</h3>
             <p class="pb-10 leading-relaxed">
-              With a passion for crafting innovative and scalable digital solutions, I specialise in designing robust 
-              architectural strategies that drive business growth. Combining technical expertise with strategic insights, 
-              I work closely with teams to transform requirements into seamless, user-focused experiences. <span class="source-sans-bold">Let's build the 
-              future together.</span>
+              A passion for innovative and scalable solutions, I specialise in designing cloud architectures and
+              leading projects that drive business growth. Combining technical expertise with strategic insights.
+              I work closely with people to transform complex challenges into seamless experiences. 
             </p>
 
-            <!-- Subscription Form -->
-            {/* <h3 class="newsletter-title text-2xl font-bold mb-4 w-full">
-              Join My Newsletter
-            </h3>
-            <script async data-uid="1bd2f99f3f" src="https://danb-solution-architect.kit.com/1bd2f99f3f/index.js"></script> */}
-            {/* <div class="subscribe-box flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-1 max-w-md">
-              <input
-                type="email"
-                placeholder="Your email address"
-                class="w-full px-4 py-2 rounded border-none text-gray-700"
-              />
-              <button
-                type="button"
-                class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded"
-              >
-                Subscribe
-              </button>
-            </div> */}
+            
           </div>
         )}
       </header>
@@ -143,8 +125,22 @@ const isHome = Astro.url.pathname === "/";
     text-align: left;
   }
   .header-intro h2 {
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 2.7rem;
+    font-family: 'Roboto';
+  }
+  .header-intro h2 span {
+    font-size: 2.72rem;
+  }
+  .header-intro h3 {
+    color: #D1D903;
     font-size: 2.5rem;
-    line-height: 2.5rem;
+    font-family: 'Roboto';
+    text-decoration: none;
+    font-weight: 100;
+    line-height: 2.6rem;
+    margin: 0px 0 30px 0;
   }
   .header-intro p {
     max-width: 34rem;
@@ -156,10 +152,12 @@ const isHome = Astro.url.pathname === "/";
     background: #1C1233;
   }
   #hero-grad {
-    background: rgb(15,1,50);
-    background: linear-gradient(192deg, rgba(15, 1, 50, 0.73) 0%, rgb(10 40 107 / 73%) 50%, rgb(15, 1, 50, 0.73) 100%);
+    /* background: rgb(15,1,50); */
+    /* background: linear-gradient(192deg, rgba(15, 1, 50, 0.73) 0%, rgb(10 40 107 / 73%) 50%, rgb(15, 1, 50, 0.73) 100%); */
+    background-image: url('/assets/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-
   .subscribe-box {
     position: relative;
     top: 20px;

@@ -20,6 +20,14 @@ const sortedPosts = getSortedPosts(posts);
   
   <main id="main-content">
     <!-- ===== About & Blog Posts Layout ===== -->
+    <!-- <section class="newsletter max-w-6xl mx-auto px-4 py-8 sm:py-20">
+      <div class="subscribe">
+        <h3 class="newsletter-title text-2xl font-bold mb-4 w-full">
+          I run a newsletter with my insights, join up?
+        </h3>
+        <script async data-uid="1bd2f99f3f" src="https://danb-solution-architect.kit.com/1bd2f99f3f/index.js"></script>
+      </div>
+    </section> -->
     <section
       id="about-blog"
       class="max-w-6xl mx-auto px-4 py-8 sm:py-20 gap-8"
@@ -111,6 +119,23 @@ const sortedPosts = getSortedPosts(posts);
 
   #hero.p {
     color: white;;
+  }
+
+  section.newsletter {
+    padding: 0;
+  }
+  .subscribe {
+    background: white;
+  }
+  .newsletter-title {
+    font-size: 1.4rem;
+    font-family: "Roboto";
+    text-decoration: none;
+    font-weight: 400;
+    line-height: 2.6rem;
+    margin: 0px 0 0px 0;
+    color: black;
+    padding-left: 10px;
   }
 
   /* If you prefer to use @apply for reusability, you can do so:
