@@ -220,6 +220,13 @@
     margin: 20px 0 10px;
     line-height: 2rem;
   }
+  #article h3 {
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    margin: 20px 0 10px;
+    text-decoration: unset;
+    font-weight: 600;
+  }
   #article p {
     line-height: 1.6rem;
   }
@@ -230,7 +237,24 @@
     padding-left: 1.625em;
   }
   #article ul li {
-    padding-left: 0.375em;
+    padding-left: .375em;
+    margin: 10px 0 10px 0;
+  }
+
+  #article ol {
+    list-style-type: decimal;
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    padding-left: 1.625em;
+  }
+
+  #article ol li {
+    padding-left: .375em;
+    margin: 10px 0 10px 0;
+  }
+  #article p a {
+    text-decoration: underline;
+    color: darkblue;
   }
 }
 
