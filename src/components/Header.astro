@@ -101,17 +101,21 @@ const isHome = Astro.url.pathname === "/";
         </div>
         {/* <Hr /> */}
         {isHome && (
-          <div class="header-intro px-4 max-w-3xl">
-            <h2>I CREATE SOLUTIONS,</br>
-            <span>NOT JUST DOCUMENTS.</h2>
-            <h3>Building stuff you actually need.</h3>
-            <p class="pb-10 leading-relaxed">
-              A passion for innovative and scalable solutions, I specialise in designing cloud architectures and
-              leading projects that drive business growth. Combining technical expertise with strategic insights.
-              I work closely with people to transform complex challenges into seamless experiences. 
-            </p>
+         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:col-span-2">
+            <div class="header-intro px-4 max-w-3xl">
+              <h2>I CREATE SOLUTIONS,</br>
+              <span>NOT JUST DOCUMENTS.</h2>
+              <h3>Building stuff you actually need.</h3>
+              <p class="pb-10 leading-relaxed">
+                A passion for innovative and scalable solutions, I specialise in designing cloud architectures and
+                leading projects that drive business growth. Combining technical expertise with strategic insights.
+                I work closely with people to transform complex challenges into seamless experiences. 
+              </p>
+            </div>
 
-            
+            <div class="profile-photo px-4 max-w-3xl">
+              <img src="/assets/danb-solutions-architect.png"/>
+            </div>
           </div>
         )}
       </header>
@@ -120,6 +124,15 @@ const isHome = Astro.url.pathname === "/";
 </div>
 
 <style>
+  .logo h1 {
+    margin-bottom: 7px;
+    line-height: 2.7rem;
+  }
+  .logo p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 1.8rem;
+  }
   .header-intro {
     color: white;
     text-align: left;
@@ -139,7 +152,7 @@ const isHome = Astro.url.pathname === "/";
     font-family: 'Roboto';
     text-decoration: none;
     font-weight: 100;
-    line-height: 1.5rem;
+    line-height: 1.9rem;
     margin: 0px 0 30px 0;
   }
   .header-intro p {
@@ -147,9 +160,17 @@ const isHome = Astro.url.pathname === "/";
     font-size: 1.2rem;
     line-height: 1.2;
   }
+  .profile-photo img {
+    justify-self: center;
+  }
+  @media (max-width: 1070px) {
+    .profile-photo {
+      display: none;
+    }
+  }
   #hero {
     /* The tailwind classes handle the gradient, padding, etc. */
-    background: #1C1233;
+    background: #111a15;
   }
   #hero-grad {
     /* background: rgb(15,1,50); */
