@@ -16,7 +16,7 @@ Like me, and many others, you might’ve got an email from Microsoft Azure about
 
 So what was it this time? The “magic” behind Azure App Service will not automatically put Azure App Service web apps into disaster recovery mode if a region goes down after the announced date.
 
-This email may have confused some people_. It’s one of those convenient services you trust to…just work? Like buying your favourite safe food, then the manufacturer has changed a single insignificant ingredient they think won’t matter._
+This email may have confused some people_. It’s one of those convenient services you trust to…just work? Like buying your favourite safe food, then the manufacturer has changed a single insignificant ingredient they think won’t matter.
 
 **The information within this article is only advice, if you’re not fully certain you must seek your own professional consultancy.**
 
