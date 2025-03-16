@@ -1,8 +1,8 @@
 ---
 title: 'EE Expert - Internal Portal'
 img: 
-alt: he project was to create an employee portal for gamification of learning.
-description: he project was to create an employee portal for gamification of learning.
+alt: The project was to create an employee portal for gamification of learning.
+description: The project was to create an employee portal for gamification of learning.
 tags: ['portfolio', 'website', 'javascript', 'php', 'wordpress', 'css', 'accessibility', 'design']
 show: true
 ---

@@ -4,7 +4,7 @@ datetime: 2025-03-17
 img: 
 alt: "Prepare for Azure App Service DR retirement (March 2025). Learn best practices for geo-redundant backups, failover strategies, and ensuring app continuity."
 description: "Prepare for Azure App Service DR retirement (March 2025). Learn best practices for geo-redundant backups, failover strategies, and ensuring app continuity."
-tags: ['Azure', 'Microsoft', 'Disaster Recovery', 'Azure App Service', 'Azure Databases', 'Backup']
+tags: ['azure', 'microsoft', 'disaster-recovery', 'azure-app-service', 'azure-databases', 'backup']
 show: true
 ---
 

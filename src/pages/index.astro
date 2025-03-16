@@ -19,20 +19,19 @@ const sortedPosts = getSortedPosts(posts);
   <Header />
   
   <main id="main-content">
-    <!-- ===== About & Blog Posts Layout ===== -->
-    <!-- <section class="newsletter max-w-6xl mx-auto px-4 py-8 sm:py-20">
+    <section class="newsletter max-w-6xl mx-auto px-4 py-8 sm:py-20">
       <div class="subscribe">
-        <h3 class="newsletter-title text-2xl font-bold mb-4 w-full">
+        <h3 class="newsletter-title">
           I run a newsletter with my insights, join up?
         </h3>
         <script async data-uid="1bd2f99f3f" src="https://danb-solution-architect.kit.com/1bd2f99f3f/index.js"></script>
       </div>
-    </section> -->
+    </section>
     <section
       id="about-blog"
       class="max-w-6xl mx-auto px-4 py-8 sm:py-20 gap-8"
     >
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:col-span-2">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:col-span-2">
         <div>
           <h2 class="text-3xl mb-4 roboto-extralight">About</h2>
           <p class="mb-4">
@@ -66,7 +65,7 @@ const sortedPosts = getSortedPosts(posts);
               >contact@danb.pro</LinkButton>.
           </p>
         </div>
-        <div>
+        <div style="display: none;">
           <h2 class="text-3xl mb-4 roboto-extralight">Services</h2>
           <p>Coming soon.</p>
           <!-- <p>Coming soon. Sign up to my newsletter for the latest insights.</p> -->
@@ -125,17 +124,21 @@ const sortedPosts = getSortedPosts(posts);
     padding: 0;
   }
   .subscribe {
-    background: white;
+    justify-self: center;
+    padding: 10px;
   }
   .newsletter-title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-family: "Roboto";
     text-decoration: none;
-    font-weight: 400;
-    line-height: 2.6rem;
-    margin: 0px 0 0px 0;
+    font-weight: 100;
+    line-height: 1.7rem;
+    margin: 20px 0;
     color: black;
     padding-left: 10px;
+  }
+  #about-blog {
+    padding-top: 10px;
   }
 
   /* If you prefer to use @apply for reusability, you can do so:
